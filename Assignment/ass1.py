@@ -58,7 +58,7 @@ while(i<n):
     break
   i=i+1
 
-if(flag==0):
+if(flag==0 or n<2):
   print(f"{n} is prime")
 else:
   print(f"{n} is not prime")
@@ -174,7 +174,7 @@ term = int(input("enter num n:- "))
 number = 1
 value = 0
 while term > 0:
-  value = value+
+  value = value+1/num
   
 # 20
 n = int(input("enter num n"))

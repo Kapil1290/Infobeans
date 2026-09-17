@@ -1,0 +1,14 @@
+- i++ is not applicable in the python, instead of it, we use i=i+1
+- most efficient code of prime and not prime number check with all edge cases covered
+n = 2
+i=2
+flag=0
+while(i<n):
+  if(n%i==0):
+    flag=1
+    break
+  i=i+1
+if(flag==0 or n<2):
+  print(f"{n} is prime")
+else:
+  print(f"{n} is not prime")
