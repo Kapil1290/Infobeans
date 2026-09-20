@@ -12,3 +12,25 @@ if(flag==0 or n<2):
   print(f"{n} is prime")
 else:
   print(f"{n} is not prime")
+
+without flag variable--------
+
+if i>n//2 and n>1:
+    print("prime")
+else:
+    print("not a prime")
+
+
+print -> n=12 then  -12, -11, -10, ............ , 11, 12
+
+- it gives 2 digit after decimal in f-string(.2f)
+
+reverse the assignment
+check palindrome number or not
+wap to calc x power y
+check number is armstrong number cube of each digit
+cal sum of digit of number
+check perfect num or not
+count the digit of number 
+check strong or not   
+count even and odd digits in number

@@ -1,4 +1,4 @@
-import string
+'''import string
 # 1
 i=1
 while(i<=1000):
@@ -47,21 +47,29 @@ while(i<=n):
   if(n%i==0):
     print(i)
   i=i+1
+'''
 
+'''
 # 7
 n = int(input("enter num n"))
 i=2
 flag=0
-while(i<n):
+while(i<=n//2):
   if(n%i==0):
     flag=1
     break
   i=i+1
 
-if(flag==0 or n<2):
-  print(f"{n} is prime")
+# if(flag==0 or n<2):
+#   print(f"{n} is prime")
+# else:
+#   print(f"{n} is not prime")
+
+if i>n//2 and n>1:
+    print("prime")
 else:
-  print(f"{n} is not prime")
+    print("not a prime")
+    
 
 # 8
 n = int(input("enter num n"))
@@ -197,4 +205,122 @@ while(n!=0):
   i=i+1
 
 # 22
+n = int(input("enter number n:- "))
+i = 1
+for _ in range(1, n):
+  print(i*i*i)
+  i+=1
+
+
+# 23
+n = int(input("enter number n:- "))
+i = 1
+for _ in range(1, n):
+  print(i*i)
+  i+=2
+
+
+# 24
+n = int(input("enter number n:- "))
+i = 0
+for _ in range(1, n):
+  print(i*i)
+  i+=2
+
+
+n = int(input("enter number n:- "))
+i = 1
+for _ in range(1, n):
+  print(i*i*i)
+  i+=2
+ 
+
+n = int(input("enter number n:- "))
+i = 0
+for _ in range(1, n):
+  print(i*i*i)
+  i+=2
+
+
+
+n = int(input("enter number n:- "))
+for i in range(1, n+1):
+  if i%2==0 :
+    print("*", end=" ")
+  else :
+    print("#", end=" ")
+
+
+
+n = int(input("enter number n:- "))
+for i in range(1, n+1):
+  if i%5==0 :
+    print("Hello",end=" ")
+  else :
+    print(i, end=" ")
+
+
+n=int(input("enter number n:- "))
+for i in range(1, n+1):
+  for j in range(1, i+1):
+    print("1", end=" ")
+  print(end="  ")
+  
+
+n=int(input("enter number n:- "))
+for i in range(1, n+1):
+  for j in range(1, i+1):
+    print("9", end=" ")
+  print(end="  ")
+  
+
+n = int(input("enter number n:- "))
+x = 1
+capital=65
+small = 97
+for _ in range(1, n+1):
+  if(x%2==0):
+    print(chr(small), end=" ")
+    capital+=1
+    small+=1
+  else:
+    print(chr(capital), end=" ")
+    small+=1
+    capital+=1
+  x+=1
+
+
+alphabet = 90
+for i in range(alphabet, 64, -1):
+  print(chr(i), end=" ")
+
+
+
+n = int(input("enter number n:- "))
+ans = 1
+xtra=2
+while(n!=1):
+  if(n%xtra==0):
+    ans *= xtra
+    n //= xtra
+  else:
+    xtra+=1
+print(ans)
+
+# hcf que rem
+
+n = int(input("enter binary number :- "))
+temVar=0
+ans = 0
+while(n!=0):
+  remender = n%10
+  if(remender==1):
+    ans += 2**temVar
+  temVar+=1
+  n//=10
+
+print(ans)
+'''
+
+n = int(input("enter number greater than 9 :- "))
 
