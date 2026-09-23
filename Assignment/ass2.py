@@ -1,29 +1,29 @@
 # n = int(input("enter a number:- "))
 ans = 0
 
-# for _ in range(1,n+1):
-#     if(n==0):
-#         ans//=10
-#         break  
-#     rem = n%10
-#     ans = (ans+rem)*10
-#     n = int(n/10)
-# print((ans))
+for _ in range(1,n+1):
+    if(n==0):
+        ans//=10
+        break  
+    rem = n%10
+    ans = (ans+rem)*10
+    n = int(n/10)
+print((ans))
 
 
-# n = int(input("enter a number for checking palindrome:-"))
-# value=n
-# for _ in range(1,n+1):
-#     if(n==0):
-#         ans//=10
-#         break  
-#     rem = n%10
-#     ans = (ans+rem)*10
-#     n = int(n/10)
-# if ans==value:
-#     print("number is palidrome")
-# else :
-#     print("number is not palindrome")
+n = int(input("enter a number for checking palindrome:-"))
+value=n
+for _ in range(1,n+1):
+    if(n==0):
+        ans//=10
+        break  
+    rem = n%10
+    ans = (ans+rem)*10
+    n = int(n/10)
+if ans==value:
+    print("number is palidrome")
+else :
+    print("number is not palindrome")
 
 
 # number = int(input("enter number: - "))
@@ -34,20 +34,20 @@ ans = 0
 # print(ans)
 
 
-# n = int(input("enter number:- "))
-# value=0
-# safe = n
-# for _ in range(1,n+1):
-#     if(n==0):
-#         ans//=10
-#         break  
-#     rem = n%10
-#     value += rem**3
-#     n = int(n/10)
-# if(safe==value):
-#     print(f"{safe} is armstrong number")
-# else:
-#     print(f"{safe} is not a armstrong number")
+n = int(input("enter number:- "))
+value=0
+safe = n
+for _ in range(1,n+1):
+    if(n==0):
+        ans//=10
+        break  
+    rem = n%10
+    value += rem**3
+    n = int(n/10)
+if(safe==value):
+    print(f"{safe} is armstrong number")
+else:
+    print(f"{safe} is not a armstrong number")
 
 
 # n = int(input("enter a number:- "))
@@ -76,15 +76,15 @@ ans = 0
 
 
 
-# n = int(input("enter number for checking the perfect number:- "))
-# value=0
-# for i in range(1,n):
-#     if(n%i==0):
-#         value=value+i
-# if(n==value):
-#     print("perfect number")
-# else:
-#     print("not perfect number")
+n = int(input("enter number for checking the perfect number:- "))
+value=0
+for i in range(1,n):
+    if(n%i==0):
+        value=value+i
+if(n==value):
+    print("perfect number")
+else:
+    print("not perfect number")
 
 
 n = int(input("enter a number:-"))
