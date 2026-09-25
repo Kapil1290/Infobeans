@@ -613,7 +613,6 @@ for i in range(1, n+1):
 #40
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
-  
   for k in range(1, 2*i-2):
     print("*", end="")
   print()
@@ -712,7 +711,6 @@ for i in range(1, n+1):
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
   print("*", end="")
-
   for j in range(1, i-2+1):
     if(i!=n):
       print("-", end="")
@@ -781,6 +779,7 @@ for i in range(1, n+1):
         print(" ", end="")
     alphabet+=1
   print()
+
 #24
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
@@ -913,6 +912,9 @@ for i in range(1, n+1):
     print(chr(alphabet), end="")
     alphabet+=1
   print()
+
+#41
+
 #46
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
@@ -1124,7 +1126,27 @@ for i in range(n, 0, -1):
   for j in range(n//2, i-1, -1):
     print("*", end="")
   print()
-'''
+
+#41
+a = int(input("enter number 1:- "))
+b = int(input("enter number 2:- "))
+while b!=0:
+  tem = a
+  a = b
+  b = tem%a
+print(a)
+
+#42
+a = int(input("enter number 1:- "))
+b = int(input("enter number 2:- "))
+multiply = a*b
+while b!=0:
+  tem = a
+  a = b
+  b = tem%a
+print('LCM is :- ', int(multiply/a))
+
+
 #87
 n = 10
 for i in range(1, n+1):
@@ -1144,7 +1166,7 @@ for i in range(1, n+1):
       print(" ", end="")
     for j in range(1, i-(n//2)+1):
       print("*", end="")
-'''
+
 n = 5
 for i in range(1, n+1):
   for j in range(1, n-i+2):
@@ -1391,7 +1413,19 @@ for i in range(1, n+1):
     else:
       print(" ", end="")
   print()
-'''
 
-# n = 5
-# for i in range(1, n+1):
+'''
+#pascal triangle
+n = 5
+value = 1
+for i in range(1, n+1):
+  for j in range(1, n-i+2):
+    print(" ", end="")
+  x = value
+  while(x!=0):
+    rem = x%10
+    print(rem,"", end="")
+    x//=10
+  print()
+  value*=11
+
