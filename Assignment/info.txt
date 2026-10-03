@@ -25,6 +25,8 @@ print -> n=12 then  -12, -11, -10, ............ , 11, 12
 
 - it gives 2 digit after decimal in f-string(.2f)
 
+- we can also use else with for loop and it will execute when for loop terminate with full iteration 
+
 reverse the assignment
 check palindrome number or not
 wap to calc x power y
@@ -34,3 +36,4 @@ check perfect num or not
 count the digit of number 
 check strong or not   
 count even and odd digits in number
+

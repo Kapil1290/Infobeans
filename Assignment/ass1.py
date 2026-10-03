@@ -609,18 +609,19 @@ for i in range(1, n+1):
   for k in range(1, 2*i-2):
     print("*", end="")
   print()
-
+'''
 #40
+x = 1
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
-  for k in range(1, 2*i-2):
+  for k in range(1, x*i):
     print("*", end="")
+    x+=1
   print()
-
+'''
 #28
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
-  
   for k in range(1, 2*i-2):
     print(k, end="")
   print()
@@ -628,7 +629,6 @@ for i in range(1, n+1):
 #43
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
-  
   for k in range(1, i):
     print(k, end="")
   print()

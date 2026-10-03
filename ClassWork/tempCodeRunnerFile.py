@@ -1,1 +1,2 @@
-x.remove(200)
+del x[1:3]
+# print(x)
