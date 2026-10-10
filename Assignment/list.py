@@ -246,7 +246,7 @@ while i<len(arr):
         idx+=2
     i+=1
 print(newList)
-'''
+
 
 #17 
 arr = [4,3,-3,1,0]
@@ -302,6 +302,37 @@ for i in range(len(arr)-1):
         count+=1
 
 print(f"Contigous SubSeq :-  {count}")
+'''
+
+#21
+arr= [8,3,1,2]
+maxSum = -1111111
+value = 0
+for i in range(len(arr)):
+    value += arr[i]*i
+    if value>maxSum:
+        maxSum=value
+print(maxSum)
+maxSum=0
+i=0
+x=0
+while i<len(arr):
+    j=i+1
+    while j<=len(arr):
+        if j==len(arr):
+            j=0
+        if j==i:
+            value+=arr[j]*x
+            break
+        
+        value += arr[j]*x
+        if value > maxSum:
+            maxSum=value
+        
+        j+=1
+        x+=1
+    i+=1
+print(maxSum)
 
 
 #22
