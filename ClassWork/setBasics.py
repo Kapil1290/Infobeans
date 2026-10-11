@@ -19,5 +19,13 @@ print(a)
 
 print(a^b)
 print(a.symmetric_difference(b))
-print()
+print(a)
+
+
+s1 = {3,4,5,2,3,10}
+print(s1.remove(10))  # does not return anything but return error when element not found 
+print(s1)
+s1.discard(10) # does not return anything but it does not return error if element not found 
+print(a)
+
 
