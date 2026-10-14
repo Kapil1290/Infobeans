@@ -24,3 +24,14 @@ sum = 0
 for i in range(1,n+1):
     sum += 1/i
 print(int(sum))
+
+
+
+s1 = 'tea'
+s2 = 'eat'
+
+for i in s2:
+    if i in s1 and len(s1)==len:
+        print(i)
+
+
