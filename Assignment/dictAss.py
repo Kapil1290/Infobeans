@@ -101,8 +101,9 @@ for key,value in newdict.items():
 print("\n")
 for key,value in newdict.items():
     print(f"{key}:{value}")
-
 print("\n")
+
+
 #13
 res = {3:3}
 if res=={}:
@@ -111,7 +112,34 @@ else:
     print("not empty")
 
 
-#14
+#14  changes also perform in the original variable when we copied normally
+students = {
+    "std1":{
+        "name":"kapil",
+        "age":23,
+        "marks":{
+            "other":88,
+            "softskills":75,
+            "technical":56
+        }
+    },
+    "std2":{
+        "name":"ram",
+        "age":23,
+        "marks":{
+            "other":96,
+            "softskills":56,
+            "technical":80
+        }
+    }
+}
+new_var = students
+new_var["std1"]["marks"] = {
+            "math":88,
+            "english":75,
+            "chemistry":56
+        }
+print(students)
 
 
 
@@ -156,9 +184,9 @@ for key,value in res.items():
         identityofkey=key
 
 print(f"character {identityofkey} has {res.get(identityofkey)} less occurance")
-
-
 print("\n")
+
+
 #19
 value = [1,2,5]
 result={}
@@ -213,20 +241,39 @@ common_keys = []
 #         common_keys.append(key)
 print(common_keys)
 
-
+'''
 
 #23
+list_demo = {
+    "id1":23,
+    "id2":30,
+    "id3":22,
+    "id4":88,
+    "id5":75
+}
+result={}
+key_val = 0
+min = 10000000
+for _ in range(len(list_demo)):
+    min=100000
+    for key,value in list_demo.items():
+        if min>value:
+            min=value
+            key_val=key
+    result[key_val]=min
+    del list_demo[key_val]
+print(result)
+
+    
+   
 
 
 #24
 item_list = ["cat", "apple", "dog", "mango"]
-
-# for word in item_list:
-#     s = len(word)
 print({len(word):[i if len(word)==len(i) else "" for i in item_list] for word in item_list})
-
-
 print("\n\n")
+
+
 #25
 students = {
     "std1":{
@@ -284,16 +331,40 @@ for value in demo_dict.values():
     res.append(value)
 res.sort()
 print(res[len(res)-2])
-'''
 
+
+
+print("\n")
+#27
+data_list = ["eat", "tea", "bat", "ate", "potato", "naman", "anman"]
+res = {}
+for word in data_list:
+    val = "".join(sorted(word))
+    if val in res:
+        res[val].append(word)
+    else:
+        res[val] = [word]
+print(list(res.values()))
+
+
+print("\n")
+
+#28
+
+
+
+
+print("\n")
 #29
 same_value_list = []
-# d1 = {"name":"kapil", "age":33, "city":"indore", "mob":895686743}
-# d2 = {"name":"ram", "age":33, "city":"devas"}
-# if len(d1)>len(d2):
-#     for key,value in d1.items():
-#         if 
-
+d1 = {"name":"kapil", "age":33, "city":"indore", "mob":895686743}
+d2 = {"name":"ram", "age":33, "city":"devas"}
+if len(d1)>len(d2):
+    for key,value in d1.items():
+        if key in d2 and d2[key]==value:
+            same_value_list.append(key)
+print(same_value_list)
+'''
 #30
 students = {
     "std1":{
@@ -338,7 +409,7 @@ else:
 
 
 
-'''
+
 #31 
 #Output of question is :- {'a':99, 'b':20, 'c':30}
 data = {"a": 10, "b": 20}
@@ -368,3 +439,4 @@ data.update({"b": 5, "c": 3})
 print(data)
 
 '''
+

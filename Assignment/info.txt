@@ -1,4 +1,5 @@
-- i++ is not applicable in the python, instead of it, we use i=i+1
+
+
 - most efficient code of prime and not prime number check with all edge cases covered
 n = 2
 i=2
@@ -21,8 +22,6 @@ else:
     print("not a prime")
 
 
-print -> n=12 then  -12, -11, -10, ............ , 11, 12
-
 - it gives 2 digit after decimal in f-string(.2f)
 
 - we can also use else with for loop and it will execute when for loop terminate with full iteration 
@@ -40,3 +39,4 @@ count even and odd digits in number
 
 --------------------------------------------------------------------------------------
 - if we are getting the key like std.get("age") and key not present then it gives None
+- Normal list slicing return new list always
