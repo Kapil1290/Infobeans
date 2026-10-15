@@ -1,5 +1,5 @@
 
-'''
+
 #1
 dic = {
     "name":"kapil",
@@ -241,7 +241,7 @@ common_keys = []
 #         common_keys.append(key)
 print(common_keys)
 
-'''
+
 
 #23
 list_demo = {
