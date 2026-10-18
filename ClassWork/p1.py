@@ -27,16 +27,20 @@ b=2
 
 
 
-a = "a"
-b = "b"
-s = set()
-s.add(a)
-s.add(b)
-if len(s)==1:
-    print("equal")
-else:
-    print("unequal")
 
 
 
 
+
+print(ord("1"))
+
+
+def fake(a):
+    a.append(34)
+a = [3,2,3]
+fake(a)
+print(a)
+
+s = "kapil"
+t = s.join("prajapat")
+print(t)

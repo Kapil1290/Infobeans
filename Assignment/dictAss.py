@@ -400,7 +400,8 @@ search_key = "marks"
 val=0
 for key,value in students.items():
     if(key == search_key) or (search_key in value):
-        val = key 
+        val = value 
+        k = key
         break
 if val:
     print("Key founded")

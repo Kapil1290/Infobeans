@@ -1,4 +1,4 @@
-# n = int(input("enter a number:- "))
+n = int(input("enter a number:- "))
 ans = 0
 
 for _ in range(1,n+1):

@@ -40,3 +40,14 @@ count even and odd digits in number
 --------------------------------------------------------------------------------------
 - if we are getting the key like std.get("age") and key not present then it gives None
 - Normal list slicing return new list always
+-GIL is important
+
+
+
+
+
+
+String Methods---------------------------------------------------------------------
+split() 
+replace(whom_replace, replace_with)
+join
