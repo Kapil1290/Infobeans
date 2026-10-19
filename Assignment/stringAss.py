@@ -408,7 +408,125 @@ def remove_char(string, remove_character):
     else:
         print("not found")
     
-remove_char("kdffdk", "f")
+# remove_char("kdffdk", "f")
 
 
 #30
+def prefix_string(str_list):
+    res = []
+    for idx_char in range(0, len(str_list[0])):
+        mark = False
+        for idx in range(1, len(str_list)):
+            if str_list[0][idx_char]==str_list[idx][idx_char]:
+                mark = True
+            else:
+                mark = False
+                break
+        if mark:
+            res.append(str_list[0][idx_char])
+        else:
+            break
+    print("".join(res))
+# prefix_string(["flower", "flow", "fly"])
+
+
+
+#31
+def long_substr_no_repeating(string):
+    max_len=0
+    s = set()
+    i,j=0,0
+    while(j<len(string)):
+
+        while string[j] in s:
+            s.remove(string[i])
+            i+=1
+        if string[j] not in s:
+            s.add(string[j])
+            j+=1
+        if max_len<len(s):
+            max_len=len(s)
+            res=string[i:j]
+    print(f'Length: {max_len}\nSubstring: {res}')
+
+# long_substr_no_repeating("kapilprajapat")
+
+
+
+#32
+def long_palindrome_substr(string):
+    def is_palindrome(a):
+        i=0
+        mark = True
+        j=len(a)-1
+        while(i<=j):
+            if a[i]!=a[j]:
+                return False
+            i+=1
+            j-=1
+        if mark:
+            return True
+    res = []
+    val=""
+    len_substr = 0
+    for i in range(0, len(string)):
+        for j in range(i+1, len(string)):
+            res.append(string[i:j])
+    for word in res:
+        if is_palindrome(word) and len(val)<len(word):
+            val = word
+    print(val)
+
+# long_palindrome_substr("babad")
+
+
+#33
+def bracket_balancing(string):
+    i = 0
+    j = len(string)-1
+    mark = True
+    while i<j:
+        if string[i]!=string[j]:
+            mark = False
+            break
+        i+=1
+        j-=1
+    if mark:
+        print("True")
+    else:
+        print("False")
+bracket_balancing("[()]")
+
+
+#34
+def compress_string(string):
+    res = {}
+    val = []
+    char_count=1
+    for ch in string:
+        res[ch] = res.get(ch,0)+1
+    for key,value in res.items():
+        val.append(key)
+        val.append(str(value))
+    print("".join(val))
+# compress_string("aabccccd")
+
+
+
+#35
+def expand_string(string):
+    res = []
+    i = 0
+    while i<len(string):
+        if string[i].isdigit():
+            print(int(string[i]))
+            for j in range(0, int(string[i])):
+                res.append(string[i-1])
+        i+=1
+    print("".join(res))
+
+# expand_string("a2b4c5")
+
+
+
+        
