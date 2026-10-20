@@ -129,7 +129,7 @@ def check_occurance(string):
     for ch in string:
         result[ch] = result.get(ch, 0)+1
     # print(result)
-check_occurance("addbcca")
+# check_occurance("addbcca")
 
 
 #12
@@ -242,7 +242,7 @@ def non_repeating(string):
     for ch in string:
         res[ch] = res.get(ch,0)+1
     print(res)
-non_repeating("aabbccddaa")
+# non_repeating("aabbccddaa")
 
 
 #20
@@ -389,9 +389,28 @@ def dual_freq(string):
 # dual_freq("kdffdk")
 
 
-#28
+#28  Example: "abcd" and "cdab" → True
+def circular_str(original, rotated):
+    res_str = ""
 
+    for i in range(0,len(original)):
+        res = ""
+        j=i 
+        while j<len(original):
+            res += original[j]
+            j+=1
 
+            if j==len(original)-1:
+                res += original[j]
+                j=0
+            if j==i:
+                break
+        if res==rotated:
+            print("True")
+            break
+    else:
+        print("False")
+circular_str("aeioua", "ouaaei")
 
 
 #29
@@ -495,7 +514,7 @@ def bracket_balancing(string):
         print("True")
     else:
         print("False")
-bracket_balancing("[()]")
+# bracket_balancing("[()]")
 
 
 #34

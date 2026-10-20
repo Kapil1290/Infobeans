@@ -44,3 +44,5 @@ print(a)
 s = "kapil"
 t = s.join("prajapat")
 print(t)
+
+print(s.replace("ka",""))
