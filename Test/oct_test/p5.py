@@ -14,3 +14,5 @@ for i in range(0, len(sentance)):
         tem = "".join(word)
         result[tem] = result.get(tem, 0)+1
 print(result)
+
+

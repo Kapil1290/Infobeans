@@ -1,4 +1,4 @@
-val = int(input("Enter number for checking Harshed Number"))
+val = int(input("Enter number for checking Harshed Number: "))
 backup=val
 sum=0
 while val!=0:
@@ -8,4 +8,4 @@ while val!=0:
 if backup%sum==0:
     print("harshed number")
 else:
-    print("not harshed num")
+    print("Not harshed num")
