@@ -1,5 +1,5 @@
 
-l1 = [10,20,20,30,40,50]
+l1 = [10,20,20,30,40]
 l2 = [30, 40, 60, 70]
 unique=set()
 common = set()
@@ -16,5 +16,7 @@ for i in range(0, len(l2)):
         unique.add(l2[i])
 
 print(f"unique: {unique}\ncommon: {common}")
+
+        
 
         

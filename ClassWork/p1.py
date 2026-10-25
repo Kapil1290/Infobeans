@@ -41,8 +41,72 @@ a = [3,2,3]
 fake(a)
 print(a)
 
-s = "kapil"
-t = s.join("prajapat")
-print(t)
+# s = "kapil"
+# t = s.join("prajapat")
+# print(t)
 
-print(s.replace("ka",""))
+# print(s.replace("ka",""))
+
+# print("\n")
+
+# def add(item, items=[]):
+    
+#     items.append(item)
+#     return items
+# print(add(1))
+# print(add(2))
+# print(add(3))
+
+
+
+s = "ram ramji roohoram ramrram ram is my friramjikorammji"
+inp = "ram"
+idx = 0
+res = ""
+count=0
+for i in range(0, len(s)):
+    if s[i]==inp[idx]:
+        res += s[i]
+        idx+=1
+    else:
+        res = ""
+        idx=0
+        if s[i]==inp[idx]:
+            res += s[i]
+            idx+=1  
+    if res==inp:
+        count+=1
+        res = ""
+        idx=0
+# if res==inp:
+#     count+=1
+print(count)
+
+
+
+# def my_decorator(func):  # 'func' is the function object, not its signature
+#     def wrapper(*args, **kwargs):
+#         return func(*args, **kwargs)
+#     return wrapper
+
+# @my_decorator
+# def add(x, y):
+#     return x + y
+
+# print(add(2,3))
+
+
+
+
+
+a = {"name":"kapil"}
+b = a.copy()
+print(b)
+b["name"]="hariom"
+print(b)
+print(a)
+
+
+print(345/500*100)
+
+print(34.3444444>32)
