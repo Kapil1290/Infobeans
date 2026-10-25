@@ -302,7 +302,7 @@ for i in range(len(arr)-1):
         count+=1
 
 print(f"Contigous SubSeq :-  {count}")
-'''
+
 
 #21
 arr= [8,3,1,2]
@@ -516,10 +516,15 @@ for i in range(0, len(demolist)):
 
 print(demolist)
 
-
-#37
+'''
+#37 insertion sort
 demolist = [45,34,12,43,54,23,44]
 for i in range(1,len(demolist)):
-    
+    ele = demolist[i]
+    min = i-1
+    while min>-1 and demolist[min]>ele:
+        min-=1
+    demolist[min+1],demolist[i]=demolist[i],demolist[min+1]
+print(demolist)
 
-'''
+

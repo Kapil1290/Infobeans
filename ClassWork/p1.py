@@ -110,3 +110,28 @@ print(a)
 print(345/500*100)
 
 print(34.3444444>32)
+
+
+s = "()))(("
+
+# i=0
+# count=0
+# while i<len(s)-1:
+#     if s[i]=='(':
+#         if s[i+1]==')':
+#             i+=2
+#         else:
+#             count+=1
+#             i+=1
+#     else:
+#         count+=1
+#         i+=1
+# print(count)
+    
+i=0
+count=0
+for i in range(0,len(s)-1):
+    if s[i]=='(' and s[i+1]==')':
+        count+=2
+
+print(len(s)-count)
