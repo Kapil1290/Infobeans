@@ -48,9 +48,8 @@ while(i<=n):
   if(n%i==0):
     print(i)
   i=i+1
-'''
 
-'''
+
 # 7
 n = int(input("enter num n"))
 i=2
@@ -220,7 +219,7 @@ for _ in range(1, n):
   print(i*i)
   i+=2
 
-
+'''
 # 24
 n = int(input("enter number n:- "))
 i = 0
@@ -228,14 +227,14 @@ for _ in range(1, n):
   print(i*i)
   i+=2
 
-
+#25
 n = int(input("enter number n:- "))
 i = 1
 for _ in range(1, n):
   print(i*i*i)
   i+=2
  
-
+#26
 n = int(input("enter number n:- "))
 i = 0
 for _ in range(1, n):
@@ -243,7 +242,7 @@ for _ in range(1, n):
   i+=2
 
 
-
+#27
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
   if i%2==0 :
@@ -252,7 +251,7 @@ for i in range(1, n+1):
     print("#", end=" ")
 
 
-
+#28
 n = int(input("enter number n:- "))
 for i in range(1, n+1):
   if i%5==0 :
@@ -260,21 +259,21 @@ for i in range(1, n+1):
   else :
     print(i, end=" ")
 
-
+#29
 n=int(input("enter number n:- "))
 for i in range(1, n+1):
   for j in range(1, i+1):
     print("1", end=" ")
   print(end="  ")
   
-
+#31
 n=int(input("enter number n:- "))
 for i in range(1, n+1):
   for j in range(1, i+1):
     print("9", end=" ")
   print(end="  ")
   
-
+#32
 n = int(input("enter number n:- "))
 x = 1
 capital=65
@@ -290,13 +289,13 @@ for _ in range(1, n+1):
     capital+=1
   x+=1
 
-
+#33
 alphabet = 90
 for i in range(alphabet, 64, -1):
   print(chr(i), end=" ")
 
 
-
+#34
 n = int(input("enter number n:- "))
 ans = 1
 xtra=2
@@ -308,8 +307,12 @@ while(n!=1):
     xtra+=1
 print(ans)
 
+
+
 # hcf que rem
 
+
+# 43
 n = int(input("enter binary number :- "))
 temVar=0
 ans = 0
@@ -322,9 +325,7 @@ while(n!=0):
 
 print(ans)
 
-# first and last digit
-
-
+# first and last digit 44
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 for i in range(value1, value2+1):
@@ -354,6 +355,8 @@ for n in range(value1, value2+1):
     print(ans, end=" ")
   ans=0
 
+
+
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 ans=0
@@ -375,6 +378,7 @@ value2 = int(input("enter number 2:- "))
 
 value=0
 
+#38
 for n in range(value1, value2+1):
   safe = n
   while n!=0 :
@@ -388,7 +392,7 @@ for n in range(value1, value2+1):
     print(f"{safe} is armstrong number")
   value=0
 
-
+#49
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 value=0
@@ -400,20 +404,21 @@ for n in range(value1, value2+1):
     print("perfect number ",n)
   value=0
 
-
+#54
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 for n in range(value1, value2+1):
   if n%2==0:
     print(n, end=" ")
 
+#55
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 for n in range(value1, value2+1):
   if n%2!=0:
     print(n, end=" ")
 
-
+#59
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 ans = 1
@@ -427,12 +432,12 @@ for n in range(value1, value2+1):
   print(ans, end=" ")
   ans = 1
 
-
+#60
 n = int(input("enter number n:- "))
 for i in range(1,n+1):
   print(i*i," ",i*i*i, " ", int(math.sqrt(i)))
 
-
+#61
 value1 = int(input("enter number 1 :- "))
 value2 = int(input("enter number 2:- "))
 for n in range(value1, value2+1):
@@ -440,7 +445,10 @@ for n in range(value1, value2+1):
     print(n, end=" ")
 
 
-# 1
+
+
+
+# 1  patterns
 
 n = int(input("enter number:- "))
 for i in range(1, n):
@@ -1414,7 +1422,7 @@ for i in range(1, n+1):
       print(" ", end="")
   print()
 
-'''
+
 #pascal triangle
 n = 5
 value = 1

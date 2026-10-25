@@ -11,19 +11,7 @@ for _ in range(1,n+1):
 print((ans))
 
 
-n = int(input("enter a number for checking palindrome:-"))
-value=n
-for _ in range(1,n+1):
-    if(n==0):
-        ans//=10
-        break  
-    rem = n%10
-    ans = (ans+rem)*10
-    n = int(n/10)
-if ans==value:
-    print("number is palidrome")
-else :
-    print("number is not palindrome")
+
 
 
 # number = int(input("enter number: - "))

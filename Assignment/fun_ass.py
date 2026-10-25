@@ -203,10 +203,25 @@ while True:
     else:
         print("Invalid Menu!!!!!!")
     
-'''
+
 
 
 # 5
+guess=int(input("enter number: "))
+random = 23
+
+while random != guess:
+    
+    if random<guess:
+        guess = int(input(f"guess less than {guess}: "))
+    else:
+        guess = int(input(f"guess greater than {guess}: "))
+
+print("\n\nyou found it.........hurrah")
+
+
+
+# 6
 
 product_list_piece = {
     "mouse":{
@@ -238,8 +253,34 @@ product_list_piece = {
 products=[]
 for key in product_list_piece.keys():
     products.append(key)
-print(products)
+
 cart = {}
+discount_chart={
+    "mouse":{
+        "discount":3,
+        "buy_quatity":10
+    },
+    "keyboard":{
+        "discount":3,
+        "buy_quatity":10
+    },
+    "monitor":{
+        "discount":6,
+        "buy_quatity":20
+    },
+    "power":{
+        "discount":2.5,
+        "buy_quatity":10
+    },
+    "cpubox":{
+        "discount":1.5,
+        "buy_quatity":6
+    },
+    "battery":{
+        "discount":3,
+        "buy_quatity":20
+    }
+}
 
 while True:
     print("----------------Welcome--------------------")
@@ -248,26 +289,141 @@ while True:
         print(f"press: {ch} {key}        ", end=" ")
         print(f"{value["price"]} /-")
         ch+=1
-    
-    choice = input()
+    print("press: 0 Exit")
+    choice = input("Enter Choice: ")
+    if choice=="0":
+        if cart:
+            print("\n\n-------------Bill------------")
+            print(f"Item------------quatity-------------price---------------Discount---------finalprice")
+            total= 0
+            dist_total=0
+            for item, quatity in cart.items():
+                
+                if quatity>=discount_chart[item]["buy_quatity"]:
+                    dist_rate = discount_chart[item]["discount"]
+                    dist_total += discount_chart[item]["discount"]
+                    print(f"{item}            {quatity}                 {(product_list_piece[item]["price"]*quatity)}                  {dist_rate}%              {(product_list_piece[item]["price"]*quatity)-((dist_rate/100)*(product_list_piece[item]["price"]*quatity))}\t")
+                    
+                else:
+                    print(f"{item}            {quatity}                 {(product_list_piece[item]["price"]*quatity)}                  0%                     {(product_list_piece[item]["price"]*quatity)}\t")
+            if dist_total:
+                print(f"\nYou got {dist_total}% discount.......Hurrah!\n")
+        else:
+            print("You didn't buy anything :)")
+        break
+
     if choice=="1":
         need = int(input("Enter Quatity: "))
-        
+
         if product_list_piece[products[int(choice)-1]]["quatity_available"]>=need:
-            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+1
+            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+need
             product_list_piece[products[int(choice)-1]]["quatity_available"]-=need
         else:
-            print(f"{products[int(choice)-1]} Insufficient")
+            print(f"{products[int(choice)-1]} Insufficient\n\n")
     
     elif choice=="2":
         need = int(input("Enter Quatity: "))
 
         if product_list_piece[products[int(choice)-1]]["quatity_available"]>=need:
-            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+1
+            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+need
             product_list_piece[products[int(choice)-1]]["quatity_available"]-=need
         else:
-            print(f"{products[int(choice)-1]} Insufficient")
-    break
+            print(f"{products[int(choice)-1]} Insufficient\n\n")
+    
+    elif choice=="3":
+        need = int(input("Enter Quatity: "))
+
+        if product_list_piece[products[int(choice)-1]]["quatity_available"]>=need:
+            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+need
+            product_list_piece[products[int(choice)-1]]["quatity_available"]-=need
+        else:
+            print(f"{products[int(choice)-1]} Insufficient\n\n")
+    
+    elif choice=="4":
+        need = int(input("Enter Quatity: "))
+
+        if product_list_piece[products[int(choice)-1]]["quatity_available"]>=need:
+            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+need
+            product_list_piece[products[int(choice)-1]]["quatity_available"]-=need
+        else:
+            print(f"{products[int(choice)-1]} Insufficient\n\n")
+
+    elif choice=="5":
+        need = int(input("Enter Quatity: "))
+
+        if product_list_piece[products[int(choice)-1]]["quatity_available"]>=need:
+            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+need
+            product_list_piece[products[int(choice)-1]]["quatity_available"]-=need
+        else:
+            print(f"{products[int(choice)-1]} Insufficient\n\n")
+    
+    elif choice=="6":
+        need = int(input("Enter Quatity: "))
+
+        if product_list_piece[products[int(choice)-1]]["quatity_available"]>=need:
+            cart[products[int(choice)-1]]=cart.get(products[int(choice)-1], 0)+need
+            product_list_piece[products[int(choice)-1]]["quatity_available"]-=need
+        else:
+            print(f"{products[int(choice)-1]} Insufficient\n\n")
+    else:
+        print("Invalid Input")
+
+
+
+# 7
+
+
+while True:
+    print(f"-----------------Password Checker---------------")
+    print(f"Password must contain--\nNumber\nAlphabets(small and capital both)\nSpecial symbol\n")
+    password = input("Enter password(min-length: 5) : ")
+    spacial_char = 0
+    alpha_capital = 0
+    alpha_sml = 0
+    number = 0
+    if len(password)<5:
+        print("Length of password should be minimum 5.....")
+    else:
+        for ch in password:
+            if ord("0")<=ord(ch)<=ord("9"):
+                number+=1
+            elif ord("A")<=ord(ch)<=ord("Z"):
+                alpha_capital+=1
+            elif ord("a")<=ord(ch)<=ord("z"):
+                alpha_sml+=1
+            else:
+                spacial_char+=1
+
+        print("\n\n")
+        if spacial_char<=1 and alpha_capital<=1 and number<=2:
+            print("Password is WEAK")
+        elif (spacial_char<=2 and number<=3) and (alpha_capital<3 or alpha_sml<4) and alpha_capital<=3:
+            print("Password is MEDIUM")
+        else:
+            print("Password is STRONG")
+            break
+
+
+
+
+# 8
+
+print("-------Welcome-------")
+name = input("Enter name: ")
+id = int(input("enter id: "))
+salary = int(input("enter salary: "))
+present_day = int(input("Enter day you presented(monthly: exclude sunday): ")) + 4
+
+print("\nYour Report----------")
+print(f"Hii {name.upper()}")
+print(f"Attendance: {(present_day*100)//30}%")
+Leaves= 30-present_day
+print(f"As Per 50 Rs/day fine BASE SALARY: {salary-50*Leaves}")
+
+
+'''
+    
+
 
 
 

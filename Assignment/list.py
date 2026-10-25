@@ -341,7 +341,7 @@ arr.sort()
 print(f"Nearest lesser is {arr[0]} \nNearest Greater is {arr[len(arr)-1]}")
 
 
-'''
+
 #23
 arr = [23,34,44,56,66,78]
 sum = 0
@@ -355,6 +355,37 @@ tem = arr[len(arr)-1]
 arr[len(arr)-1] = arr[0]
 arr[0] = tem
 print(arr)
+
+
+#25
+arr = [1,2,3,4,5,6]
+i = 0
+j=len(arr)-1
+while i<j:
+    arr[i],arr[j]=arr[j],arr[i]
+    i+=1
+    j-=1
+print(arr)
+
+
+#26
+arr = [1,22,3,42,5,6]
+max = float('-inf')
+min = float('inf')
+for ele in arr:
+    if max<ele:
+        max = ele
+    if min>ele:
+        min = ele
+print(f"max: {max}\nmin: {min}")
+
+#28
+arr = [23,33,5,1,55,85]
+search = 34
+if search in arr:
+    print("element found")
+else:
+    print("element not found")
 
 
 #30
@@ -381,6 +412,9 @@ while(p2!=-1):
     newArr.append(arr2[p2])
     p2-=1
 print(newArr)
+
+
+
 
 #31
 arr1 = [10,9,8,7,6,5,4,3]
@@ -481,4 +515,11 @@ for i in range(0, len(demolist)):
             demolist[j] = temp
 
 print(demolist)
+
+
+#37
+demolist = [45,34,12,43,54,23,44]
+for i in range(1,len(demolist)):
+    
+
 '''
