@@ -49,7 +49,7 @@ while True:
 
 
 
-
+'''
 # 2
 
 def calculate_total(marks):
@@ -115,32 +115,33 @@ while attempt!=0:
         password = input()
     if password==secret:
         print("Password Matched.......")
-        break
-    attempt-=1
+        operations()
+    attempt-=1 
 
-while True:
-    print("--------------------Menu-----------------------")
-    print("1 for Display Amount ")
-    print("2 for Withdraw amount ")
-    print("3 for Deposit amount")
-    print("5 for exit")
+def operations():
+    while True:
+        print("--------------------Menu-----------------------")
+        print("1 for Display Amount ")
+        print("2 for Withdraw amount ")
+        print("3 for Deposit amount")
+        print("5 for exit")
 
-    choice = input()
-    if choice == "5":
-        break
-    
-    if choice=="1":
-        display_amt()
-    elif choice=="2":
-        amt = int(input("Enter Amount you want: "))
-        print(withdraw(amt))
-    elif choice=="3":
-        amt = int(input("Enter Amount for deposit: "))
-        print(deposit(amt))
+        choice = input()
+        if choice == "5":
+            break
+        
+        if choice=="1":
+            display_amt()
+        elif choice=="2":
+            amt = int(input("Enter Amount you want: "))
+            print(withdraw(amt))
+        elif choice=="3":
+            amt = int(input("Enter Amount for deposit: "))
+            print(deposit(amt))
 
 
 
-
+'''
 # 4
 cart_price = 0
 bucket = {}

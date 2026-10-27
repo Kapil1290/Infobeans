@@ -40,10 +40,8 @@ count even and odd digits in number
 --------------------------------------------------------------------------------------
 - if we are getting the key like std.get("age") and key not present then it gives None
 - Normal list slicing return new list always
--GIL is important
-
-
-
+-GIL (Global Interpreter Lock) allows only one thread executes Python bytecode at a time. 
+-sort(reverse=true) it will convert to descending order
 
 
 

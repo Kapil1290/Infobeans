@@ -135,3 +135,11 @@ for i in range(0,len(s)-1):
         count+=2
 
 print(len(s)-count)
+
+
+
+a = ['a', 'b', 'c', 'd']
+for i, item in enumerate(a):
+    print(i, item)
+
+

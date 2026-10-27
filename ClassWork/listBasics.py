@@ -47,7 +47,7 @@ list2 = [1,2,4,4,5]
 # check the sum of elements in the list 
 print(list1<=list2)
 
-list1 = list1*list2
+# list1 = list1*list2
 print(list1)
 
 
@@ -90,3 +90,34 @@ print(f"{m} {n} {o}")
 
 #we can't replace the list inside the tuple 
 # we can edit the list inside the tuple 
+
+
+# access the idx and elements both --- using enumerate()
+
+a = ['a', 'b', 'c', 'd']
+for i, item in enumerate(a):
+    print(i, item)
+
+print(sorted(a,reverse=True))
+
+word = ["orange", "papaya", "apple", "guava"]
+
+res = sorted(word, key=len) # return new list
+print(res)
+print(word)
+
+
+
+original = [1,[2,2],3]
+a = original
+
+
+print(original)
+
+shallow = original.copy()
+print(original is a)
+
+original[1][0] = 12
+print(original)
+# shallow[0] = 23
+print(shallow)

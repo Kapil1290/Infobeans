@@ -1,0 +1,486 @@
+#1
+check_string = "abs"
+list_demo = list(check_string)
+l = 0
+h = len(check_string)-1
+flag=0
+while l<h:
+    while l<h and not list_demo[l].isalnum():
+        l+=1
+    while l<h and not list_demo[h].isalnum():
+        h-=1
+    if list_demo[l]!=list_demo[h]:
+        flag = 1
+        break
+    else:
+        l+=1
+        h-=1
+if flag:
+    print("not palindrome")
+else :
+    print("palindrome")
+
+
+#2
+check_string = "khkdfṇ2&%88,2..*hk"
+list_demo = list(check_string)
+l = 0
+h = len(check_string)-1
+flag=0
+while l<h:
+    while l<h and not list_demo[l].isalnum():
+        l+=1
+    while l<h and not list_demo[h].isalnum():
+        h-=1
+    if list_demo[l]!=list_demo[h]:
+        flag = 1
+        break
+    else:
+        l+=1
+        h-=1
+if flag:
+    print("not palindrome")
+else :
+    print("palindrome")
+
+#3
+check_string = "kadbdieu495*/-dkfkvc"
+vowel=0
+consonant = 0
+check_list = "aeiouAEEIOU"
+list_demo = list(check_string)
+
+for ch in list_demo:
+    if ch in check_list:
+        vowel+=1
+    elif (ord(ch)>=65 and ord(ch)<=90) or (ord(ch)>=97 and ord(ch)<=122):
+        consonant+=1
+print(f"Vowels: {vowel}\nConsonants: {consonant}")
+
+#4
+check_string = "kadbdieu495*/-dkfkvc"
+upper_case = 0
+lower_case = 0
+digit = 0
+special_symbol = 0
+list_demo = list(check_string)
+
+for ch in list_demo:
+    if ord(ch)>=ord("0") and ord(ch)<=ord("9"):
+        digit+=1
+    elif ord(ch)>=ord("A") and ord(ch)<=ord("Z"):
+        upper_case+=1
+    elif ord(ch)>=ord("a") and ord(ch)<=ord("z"):
+        lower_case+=1
+    else:
+        special_symbol+=1
+print(f"digit: {digit}\ncapital: {upper_case}\nsmall: {lower_case}\nspecial: {special_symbol}")
+
+#5
+string = "kapilkdifut"
+length = 0
+for i in string:
+    length+=1
+print(f"length is: {length}")
+
+#6
+sentance = " i am kapil prdd dfd sd  ksdk  fdkdsf  ajapat "
+sentance = sentance.strip()
+count=0
+i = 0
+word = 0
+while(i<len(sentance)):
+    if sentance[i] != " ":
+        word=1
+    elif word==1:
+        word=0
+        count+=1
+    if sentance[i] != " " and i==len(sentance)-1:
+        count+=1
+    i+=1
+    
+print(count)
+
+#7
+word = "indorE345&"
+print(word.upper())
+
+#8 
+string = " my name is kapl "
+a = list(string)
+for ch in a:
+    if ch==" ":
+        a.remove(ch)
+new_str = "".join(a)
+print(new_str)
+
+#9 
+string = "kapil"
+print(f"first character: {string[0]}\nsecond character: {string[len(string)-1]}")
+
+#10
+string = "kapil is a boy"
+string = string.replace(' ',"-")
+print(string)
+
+#11
+string = "addbcca"
+result = {}
+for ch in string:
+    result[ch] = result.get(ch, 0)+1
+
+#12
+a = "kail"
+b = "kil"
+s = set()
+s.add(a)
+s.add(b)
+if len(s)>1:
+    print("Unequal")
+else:
+    print("Equal")
+
+#13
+string = "kapil"
+for ch in string:
+    print(ch)
+
+#14
+string = "kak34s4pi3442l"
+i=0
+while i<len(string):
+    if ord(string[i])>=ord(string[i])<=ord("9"):
+        string.remove(string[i])
+    else:
+        i+=1
+
+#15
+string = "ka9"
+for ch in string:
+    print(ord(ch))
+
+#16
+string = "hero"
+string2 = "hore"
+res = {}
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for ch in string2:
+    res[ch] = res.get(ch,0)-1
+    if res[ch]==0:
+        del res[ch]
+if not res:
+    print("True")
+else:
+    print("False")
+
+#17
+string = "aabbccddaa"
+val=0
+res = {}
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for key,value in res.items():
+    if value==1:
+        val = key
+        break
+if val:
+    print(f"character is {val.upper()}")
+else:
+    print("No repeating character")
+
+#18
+string = "programming"
+val=0
+res = {}
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for key,value in res.items():
+    if value>=2:
+        val = key
+        break
+if val:
+    print(f"character is {val.upper()}")
+else:
+    print("No character")
+
+#19
+string = "aabbccddaa"
+val=0
+res = {}
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+print(res)
+
+#20
+string = "programmming"
+res = []
+for ch in string:
+    if ch not in res:
+        res.append(ch)
+string = "".join(res)
+print(string)
+
+#21 
+string = "aabbccccd"
+val=0
+res = {}
+max = -1000000
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for key,value in res.items():
+    if value>max:
+        max=value
+        val = key
+if val:
+    print(f"First Highest repeating character is {val.upper()}")
+else:
+    print("No character")
+
+#22
+string = "aabbccccd"
+val=0
+res = {}
+max = -1000000
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for key,value in res.items():
+    if value>max:
+        max=value
+        val = key
+del res[val]
+print(res)
+max = -1000000
+for key,value in res.items():
+    if value>max and key != val:
+        max=value
+        val = key
+        break
+if val:
+    print(f"Second Highest repeating character is {val.upper()}")
+else:
+    print("No character")
+
+#23
+string = "python is programming language"
+res = []
+res_str = ""
+string = string.strip()
+for idx in range(len(string)-1, -1, -1):
+    if string[idx]!=" ":
+        res_str+=string[idx]
+    elif string[idx]==" " and idx!=0:
+        res.append(res_str[::-1]+" ")
+        res_str=""
+    if idx==0:
+        res.append(res_str[::-1])
+        res_str=""
+    
+print("".join(res))
+
+#24
+string = "Python is easy"
+res = []
+res_str = ""
+string = string.strip()
+for idx in range(0, len(string)):
+    if string[idx]!=" ":
+        res_str+=string[idx]
+    elif string[idx]==" " and idx!=0:
+        res.append(res_str[::-1]+" ")
+        res_str=""
+    if idx==len(string)-1:
+        res.append(res_str)
+        res_str=""
+    
+print("".join(res))
+
+#25
+string = "kapdf73il1213"
+res = []
+for ch in string:
+    if ord(ch)>=ord(ch)<=ord("9"):
+        res.append(ch)
+if res:
+    print(f"Digits are {res}")
+else:
+    print("no digit present")
+
+#26
+string = "Python is easy but not a toughest"
+max_len=0
+res_str = ""
+word = ""
+string = string.strip()
+for idx in range(0, len(string)):
+    if string[idx]!=" ":
+        res_str+=string[idx]
+    elif string[idx]==" " and idx!=0:
+        if max_len<len(res_str):
+            word = res_str
+            max_len=len(res_str)
+        res_str=""
+    if idx==len(string)-1:
+        
+        if max_len<len(res_str):
+            word = res_str
+            max_len=len(res_str)
+        res_str=""
+print(word)
+
+
+#27
+string = "kdffdk"
+val=0
+res = {}
+result = []
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for key,value in res.items():
+    if value>1:
+        result.append(f"{key}:{value}")
+if result:
+    print(result)
+else:
+    print("no anything")
+
+#28
+original = "aeioua"
+rotated = "ouaaei"
+res_str = ""
+
+for i in range(0,len(original)):
+    res = ""
+    j=i 
+    while j<len(original):
+        res += original[j]
+        j+=1
+
+        if j==len(original)-1:
+            res += original[j]
+            j=0
+        if j==i:
+            break
+    if res==rotated:
+        print("True")
+        break
+else:
+    print("False")
+
+#29
+string = "kdffdk"
+remove_character = "f"
+string = list(string)
+print(string)
+if remove_character in string:
+    for ch in range(0, len(string)):
+        if string[ch]==remove_character:
+            del string[ch]
+            string = "".join(string)
+            print(string)
+            break
+else:
+    print("not found")
+
+#30
+str_list = ["flower", "flow", "fly"]
+res = []
+for idx_char in range(0, len(str_list[0])):
+    mark = False
+    for idx in range(1, len(str_list)):
+        if str_list[0][idx_char]==str_list[idx][idx_char]:
+            mark = True
+        else:
+            mark = False
+            break
+    if mark:
+        res.append(str_list[0][idx_char])
+    else:
+        break
+print("".join(res))
+
+#31
+string = "kapilprajapat"
+max_len=0
+s = set()
+i,j=0,0
+while(j<len(string)):
+
+    while string[j] in s:
+        s.remove(string[i])
+        i+=1
+    if string[j] not in s:
+        s.add(string[j])
+        j+=1
+    if max_len<len(s):
+        max_len=len(s)
+        res=string[i:j]
+print(f'Length: {max_len}\nSubstring: {res}')
+
+#32
+string = "babad"
+res = []
+val=""
+len_substr = 0
+for i in range(0, len(string)):
+    for j in range(i+1, len(string)):
+        res.append(string[i:j])
+for word in res:
+    # Inlined internal is_palindrome(word) logic exactly as written
+    a = word
+    i_pal=0
+    mark = True
+    j_pal=len(a)-1
+    is_pal_result = None
+    while(i_pal<=j_pal):
+        if a[i_pal]!=a[j_pal]:
+            is_pal_result = False
+            break
+        i_pal+=1
+        j_pal-=1
+    if is_pal_result is None and mark:
+        is_pal_result = True
+        
+    if is_pal_result and len(val)<len(word):
+        val = word
+print(val)
+
+#33
+string = "[()]"
+i = 0
+j = len(string)-1
+mark = True
+while i<j:
+    if string[i]!=string[j]:
+        mark = False
+        break
+    i+=1
+    j-=1
+if mark:
+    print("True")
+else:
+    print("False")
+
+#34
+string = "aabccccd"
+res = {}
+val = []
+char_count=1
+for ch in string:
+    res[ch] = res.get(ch,0)+1
+for key,value in res.items():
+    val.append(key)
+    val.append(str(value))
+print("".join(val))
+
+#35
+string = "a2b4c5"
+res = []
+i = 0
+while i<len(string):
+    if string[i].isdigit():
+        print(int(string[i]))
+        for j in range(0, int(string[i])):
+            res.append(string[i-1])
+    i+=1
+print("".join(res))

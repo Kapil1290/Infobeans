@@ -1,6 +1,17 @@
 #1
+def reverse_str(string):
+    i = 0
+    j = len(string)-1
+    string = list(string)
+    while i<j:
+        string[i],string[j]=string[j],string[i]
+        i+=1
+        j-=1
+    return "".join(string)
 name = "kapil"
-# print(name[::-1])
+print(reverse_str(name))
+
+
 
 #2
 def palindrome(check_string):
@@ -275,7 +286,7 @@ def high_repeating(string):
 
 
 #22  not accurate 
-def high_repeating(string):
+def sec_high_repeating(string):
     val=0
     res = {}
     max = -1000000
@@ -286,16 +297,18 @@ def high_repeating(string):
             max=value
             val = key
     del res[val]
+    print(res)
     max = -1000000
     for key,value in res.items():
         if value>max and key != val:
             max=value
             val = key
+            break
     if val:
-        print(f"First Highest repeating character is {val.upper()}")
+        print(f"Second Highest repeating character is {val.upper()}")
     else:
         print("No character")
-# high_repeating("aabbccccd")
+sec_high_repeating("aabbccccd")
 
 
 #23
