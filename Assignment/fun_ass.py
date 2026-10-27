@@ -51,38 +51,52 @@ while True:
 
 '''
 # 2
-
-def calculate_total(marks):
-    return sum(marks) 
-def calculate_percentage(marks):
-    total = calculate_total(marks)
-    return (total//5)
-def calculate_grade(marks):
-    percent = calculate_percentage(marks)
-    print(percent)
-    if 90<=percent<=100:
-        return "Grade A"
-    elif 65<=percent<=89:
-        return "Grade B"
-    elif 54<=percent<=64:
-        return "Grade C"
-    elif 44<=percent<=53:
-        return "Grade D"
+class_students = []
+flag = 0
+while True:
+    def calculate_total(marks):
+        return sum(marks) 
+    def calculate_percentage(marks):
+        total = calculate_total(marks)
+        return (total//5)
+    def calculate_grade(marks):
+        percent = calculate_percentage(marks)
+        if 90<=percent<=100:
+            return "Grade A"
+        elif 65<=percent<=89:
+            return "Grade B"
+        elif 54<=percent<=64:
+            return "Grade C"
+        elif 44<=percent<=53:
+            return "Grade D"
+        else:
+            return "You Failed!!!"
+    
+    if flag==0:
+        print("Enter the marks of your 5 subjects (between: 1 to 100)")
+        flag=1
     else:
-        return "Grade E (Poor Performance)"
-
-
-print("Enter the marks of your 5 subjects")
-i=0
-marks = []
-while i<5:
-    marks.append(int(input()))
-    i+=1
-print(f"Total marks: {calculate_total(marks)}")
-print(f"Percentage: {calculate_percentage(marks)}%")
-print(f"Grade: {calculate_grade(marks)}")
-
-
+        res = input("Move ahead(Y/N): ")
+        if res=='n' or res=='N':
+            break 
+        else:
+            flag=0
+            continue
+    
+    i=0
+    marks = []
+    while i<5:
+        a = int(input())
+        if a==0:
+            print("0 marks not valid")
+            break
+        marks.append(a)
+        i+=1
+    print(f"Total marks: {calculate_total(marks)}")
+    print(f"Percentage: {calculate_percentage(marks)}%")
+    class_students.append(calculate_percentage(marks))
+    print(f"Grade: {calculate_grade(marks)}")
+    print(f"\nClass Average is: {sum(class_students)/len(class_students)}")
 
 # 3
 
