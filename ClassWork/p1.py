@@ -141,5 +141,11 @@ print(len(s)-count)
 a = ['a', 'b', 'c', 'd']
 for i, item in enumerate(a):
     print(i, item)
+a=10
 
+def fun():
+    global a
+    a = a+1
+    print(a)
 
+fun()
