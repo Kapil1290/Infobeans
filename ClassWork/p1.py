@@ -149,3 +149,31 @@ def fun():
     print(a)
 
 fun()
+
+
+class a:
+    def __init__(self, name, age):
+        self.age = age
+        self.name = name
+    
+    def __str__(self):
+        return f"{self.name}\n{self.age}"
+
+    def __repr__(self):
+        return f"{self.name}\n{self.age}"
+
+    def __hash__(self):
+        return hash(self.name)
+    
+    def __eq__(current, obj):
+        return current.name == obj.name
+
+a1 = a("alex", 23)
+a2 = a("alex", 22)
+print(a1 == a2)
+
+s = set()
+s.add(a1)
+print(s)
+s.add(a2)
+print(s)
