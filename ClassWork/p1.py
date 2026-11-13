@@ -32,148 +32,160 @@ b=2
 
 
 
-print(ord("1"))
+# print(ord("1"))
 
 
-def fake(a):
-    a.append(34)
-a = [3,2,3]
-fake(a)
-print(a)
+# def fake(a):
+#     a.append(34)
+# a = [3,2,3]
+# fake(a)
+# print(a)
 
-# s = "kapil"
-# t = s.join("prajapat")
-# print(t)
+# # s = "kapil"
+# # t = s.join("prajapat")
+# # print(t)
 
-# print(s.replace("ka",""))
+# # print(s.replace("ka",""))
 
-# print("\n")
+# # print("\n")
 
-# def add(item, items=[]):
+# # def add(item, items=[]):
     
-#     items.append(item)
-#     return items
-# print(add(1))
-# print(add(2))
-# print(add(3))
+# #     items.append(item)
+# #     return items
+# # print(add(1))
+# # print(add(2))
+# # print(add(3))
 
 
 
-s = "ram ramji roohoram ramrram ram is my friramjikorammji"
-inp = "ram"
-idx = 0
-res = ""
-count=0
-for i in range(0, len(s)):
-    if s[i]==inp[idx]:
-        res += s[i]
-        idx+=1
-    else:
-        res = ""
-        idx=0
-        if s[i]==inp[idx]:
-            res += s[i]
-            idx+=1  
-    if res==inp:
-        count+=1
-        res = ""
-        idx=0
-# if res==inp:
-#     count+=1
-print(count)
+# s = "ram ramji roohoram ramrram ram is my friramjikorammji"
+# inp = "ram"
+# idx = 0
+# res = ""
+# count=0
+# for i in range(0, len(s)):
+#     if s[i]==inp[idx]:
+#         res += s[i]
+#         idx+=1
+#     else:
+#         res = ""
+#         idx=0
+#         if s[i]==inp[idx]:
+#             res += s[i]
+#             idx+=1  
+#     if res==inp:
+#         count+=1
+#         res = ""
+#         idx=0
+# # if res==inp:
+# #     count+=1
+# print(count)
 
 
 
-# def my_decorator(func):  # 'func' is the function object, not its signature
-#     def wrapper(*args, **kwargs):
-#         return func(*args, **kwargs)
-#     return wrapper
+# # def my_decorator(func):  # 'func' is the function object, not its signature
+# #     def wrapper(*args, **kwargs):
+# #         return func(*args, **kwargs)
+# #     return wrapper
 
-# @my_decorator
-# def add(x, y):
-#     return x + y
+# # @my_decorator
+# # def add(x, y):
+# #     return x + y
 
-# print(add(2,3))
-
-
+# # print(add(2,3))
 
 
 
-a = {"name":"kapil"}
-b = a.copy()
-print(b)
-b["name"]="hariom"
-print(b)
-print(a)
 
 
-print(345/500*100)
+# a = {"name":"kapil"}
+# b = a.copy()
+# print(b)
+# b["name"]="hariom"
+# print(b)
+# print(a)
 
-print(34.3444444>32)
+
+# print(345/500*100)
+
+# print(34.3444444>32)
 
 
-s = "()))(("
+# s = "()))(("
 
+# # i=0
+# # count=0
+# # while i<len(s)-1:
+# #     if s[i]=='(':
+# #         if s[i+1]==')':
+# #             i+=2
+# #         else:
+# #             count+=1
+# #             i+=1
+# #     else:
+# #         count+=1
+# #         i+=1
+# # print(count)
+    
 # i=0
 # count=0
-# while i<len(s)-1:
-#     if s[i]=='(':
-#         if s[i+1]==')':
-#             i+=2
-#         else:
-#             count+=1
-#             i+=1
-#     else:
-#         count+=1
-#         i+=1
-# print(count)
+# for i in range(0,len(s)-1):
+#     if s[i]=='(' and s[i+1]==')':
+#         count+=2
+
+# print(len(s)-count)
+
+
+
+# a = ['a', 'b', 'c', 'd']
+# for i, item in enumerate(a):
+#     print(i, item)
+# a=10
+
+# def fun():
+#     global a
+#     a = a+1
+#     print(a)
+
+# fun()
+
+
+# class a:
+#     def __init__(self, name, age):
+#         self.age = age
+#         self.name = name
     
-i=0
-count=0
-for i in range(0,len(s)-1):
-    if s[i]=='(' and s[i+1]==')':
-        count+=2
+#     def __str__(self):
+#         return f"{self.name}\n{self.age}"
 
-print(len(s)-count)
+#     def __repr__(self):
+#         return f"{self.name}\n{self.age}"
 
+#     def __hash__(self):
+#         return hash(self.name)
+    
+#     def __eq__(current, obj):
+#         return current.name == obj.name
 
+# a1 = a("alex", 23)
+# a2 = a("alex", 22)
+# print(a1 == a2)
 
-a = ['a', 'b', 'c', 'd']
-for i, item in enumerate(a):
-    print(i, item)
-a=10
+# s = set()
+# s.add(a1)
+# print(s)
+# s.add(a2)
+# print(s)
 
-def fun():
-    global a
-    a = a+1
-    print(a)
-
-fun()
 
 
 class a:
-    def __init__(self, name, age):
-        self.age = age
-        self.name = name
-    
-    def __str__(self):
-        return f"{self.name}\n{self.age}"
+    total = 0
+    def __init__(self):
+        self.total+=1
+        print(self.total)
 
-    def __repr__(self):
-        return f"{self.name}\n{self.age}"
-
-    def __hash__(self):
-        return hash(self.name)
-    
-    def __eq__(current, obj):
-        return current.name == obj.name
-
-a1 = a("alex", 23)
-a2 = a("alex", 22)
-print(a1 == a2)
-
-s = set()
-s.add(a1)
-print(s)
-s.add(a2)
-print(s)
+a1 = a()
+print(a1.__dict__)
+a2 = a()

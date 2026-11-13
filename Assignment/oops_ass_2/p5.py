@@ -1,39 +1,64 @@
-class Library:
-    total_books = 0
-    book_collection = []
-    def __init__(self, id, title, author, available_status=True):
+class Book:
+    def __init__(self, id, title):
         self.__id = id
         self.__title = title
-        self.__author = author
-        self.__available_status = available_status
-        Library.total_books+=1
+        self.__status = True
+
+    def get_status(self):
+        return self.__status
+
+    def __str__(self):
+        return f"{self.__id} | {self.__title} | {self.__status}"
         
-        # to_add = {"id":id, "title": title, "author": author, "available_status":available_status}
-        Library.book_collection.append({"id":id, "title": title, "author": author, "available_status":available_status})
-        print(Library.book_collection)
-    
+
+    def change_status(self, res):
+        self.__status = res
+
+class Library:
+    __total_books = {}
+    def add_book(self, id, title):
+        Library.__total_books[id] = Book(id, title)
+
     def issue_book(self, id):
-        for i in range(0, len(Library.book_collection)):
-            if Library.book_collection[i]['id'] == id and Library.book_collection[i]['available_status'] == True:
-                Library.book_collection[i]['available_status'] = False
-                print("Book Issued")
-                break
+        if id not in Library.__total_books:
+            print("Book not available")
+            return
+        if Library.__total_books[id].get_status():
+            print("book issued")
+            Library.__total_books[id].change_status(False)
         else:
-            print("Book not available......")
+            print("Book already issued ...")
     
     def return_book(self, id):
-        for i in range(0, len(Library.book_collection)):
-            if Library.book_collection[i]['id'] == id and Library.book_collection[i]['available_status'] == False:
-                Library.book_collection[i]['available_status'] = True
-                print("Book returned")
-                break
-        else:
-            print("Invalid Book id......")
+        if id in Library.__total_books:
+            Library.__total_books[id].change_status(True)
+            print("book returned...")
 
-    def available_books(self):
-         print([book for book in Library.book_collection if book['available_status']==True])
+    def book_count(self):
+        return len(Library.__total_books)
+    
+    def check_available(self):
+        for book in Library.__total_books.values():
+            if book.get_status():
+                print(book)
 
-l1 = Library(101, "R D P D", "Robert")
+
+l1 = Library()
+l1.add_book(101, "the lesson")
+l1.add_book(102, "the commit")
 l1.issue_book(101)
-l1.return_book(101)
-l1.available_books()
+# l1.return_book(101)
+l1.issue_book(101)
+l1.check_available()
+print(l1.book_count())
+
+class Movie:
+    def __init__(name, ts):
+        ts = ts
+        name = nDepartment
+        booked = 0
+
+class MBS:
+    __movies = {}
+
+    

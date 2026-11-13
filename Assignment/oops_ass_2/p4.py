@@ -19,6 +19,6 @@ class Student:
         else:
             print(f"You got {round(percent, 2)} Failed......")
 
-s1 =Student("Kapil", 121, [77,84,90])
+s1 =Student("Kapil", 121, [77,84,90])``
 print(s1.total_marks())
 s1.percent_calc()
