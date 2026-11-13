@@ -30,5 +30,5 @@ p1 = Product(101, "mouse", 1200, 20)
 p1.purchase(101, 10)
 p1.purchase(101, 10)
 p1.add_stock(101, 10)
-p1.purchase(101,10)
+
         
