@@ -180,12 +180,26 @@ b=2
 
 
 
-class a:
-    total = 0
-    def __init__(self):
-        self.total+=1
-        print(self.total)
+# class a:
+#     total = 0
+#     def __init__(self):
+#         self.total+=1
+#         print(self.total)
 
-a1 = a()
-print(a1.__dict__)
-a2 = a()
+# a1 = a()
+# print(a1.__dict__)
+# a2 = a()
+
+
+
+# class Animal:
+tem = {1:1,2:2}
+
+def fab(num):
+
+    if num in tem:
+        return tem[num]
+    else:
+        tem[num] = fab(num-1) + fab(num-2)
+
+print(fab(1000))
