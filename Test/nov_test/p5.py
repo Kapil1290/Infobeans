@@ -60,6 +60,8 @@ class ProductMgt:
 p1 = ProductMgt(101, "Mouse", 600, "electrocis")
 p2 = ProductMgt(102, "keyboard", 400, "electrocis")
 p3 = ProductMgt(102, "keyboard", 10000, "electrois")
+p4 = ProductMgt(103, "palm oil", 200, "grocery")
+p5 = ProductMgt(109, "light bucket", 3000, "electronics")
 
 p1.display_product()
 p1.sec_large_price()
